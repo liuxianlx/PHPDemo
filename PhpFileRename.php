@@ -5,3 +5,22 @@ foreach ($arr as $k => $v) {
     echo $v . "----->" . $filename1 . "<br>";
     rename($v, $filename1);
 }
+
+
+# -----------------------------------------
+
+$dirname = 'c:/wamp/www/zzz';
+$handle = opendir($dirname);
+while (($fn = readdir($handle)) !== false) {
+    if ($fn != '.' && $fn != '..') {
+        $curDir = $dirname . '/' . $fn;
+        $path = pathinfo($curDir);
+        if (is_dir($curDir)) {
+            echo "Is dir: $path[basename]";
+        } else {
+            var_dump($path['basename']);
+            // $newname = ???// 去掉A后的新名字
+            // rename($curDir,$newname);
+        }
+    }
+}
