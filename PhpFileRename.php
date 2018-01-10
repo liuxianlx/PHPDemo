@@ -20,7 +20,7 @@ while (($fn = readdir($handle)) !== false) {
         } else {
             var_dump($path['basename']);
             // $newname = ???// 新名字
-            // rename($curDir,$newname);
+            // rename($curDir,$newname); 
         }
     }
 }
