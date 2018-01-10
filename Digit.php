@@ -3,7 +3,7 @@
 class Digit
 {
     /**
-     * 加密
+     * 对int加密
      * @param unknown_type $str
      * @return string
      */
